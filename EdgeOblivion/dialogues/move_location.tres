@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" load_steps=2 format=3 uid="uid://segrd80ns04n"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_0p85h"]
+
+[resource]
+script = ExtResource("1_0p85h")
+graph_data = {
+"FIRST": {
+"dialogue_node_1": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(360, 220),
+"portrait": "",
+"size": Vector2(250.00015, 382),
+"to_node": ["END"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(127.216835, 284.8928),
+"size": Vector2(180, 96.999985),
+"start_id": "FIRST",
+"to_node": ["dialogue_node_1"]
+}
+}
+}
+dialogs = {
+"FIRST_DIALOG_1": {
+"default": "Вы переместились в новую локацию.",
+"en": ""
+}
+}
+characters = {
+"FIRST": {}
+}

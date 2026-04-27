@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="AchievementResource" load_steps=2 format=3 uid="uid://sj0mnai11h56"]
+
+[ext_resource type="Script" uid="uid://pgoc0142ntuq" path="res://resources_classes/achievement_resource.gd" id="1_puyvy"]
+
+[resource]
+script = ExtResource("1_puyvy")
+achievement_id = 2
+metadata/_custom_type_script = "uid://pgoc0142ntuq"

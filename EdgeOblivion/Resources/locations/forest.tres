@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LocationData" load_steps=2 format=3 uid="uid://giqh5og77xfc"]
+
+[ext_resource type="Script" uid="uid://u5nc2ei1q3t" path="res://classes/location_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+location_name = "🌲 Таинственный лес"
+location_description = "Густой лес, полный загадок и опасностей"
+icon_text = "🌲"
+metadata/_custom_type_script = "uid://u5nc2ei1q3t"

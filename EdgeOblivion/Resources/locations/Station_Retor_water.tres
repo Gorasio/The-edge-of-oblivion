@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LocationData" load_steps=6 format=3 uid="uid://biayfrji170iv"]
+
+[ext_resource type="Script" uid="uid://csqbp6bmlb12q" path="res://classes/enemy_location_data.gd" id="1_60acq"]
+[ext_resource type="Script" uid="uid://dqk6cc1doua4j" path="res://classes/npc_data.gd.gd" id="2_5d4q8"]
+[ext_resource type="Resource" uid="uid://bmlvaain32731" path="res://Resources/enemies_locations/Rat.tres" id="2_mcgm5"]
+[ext_resource type="Script" uid="uid://olyhhd3g2mj" path="res://classes/quest_location_data.gd" id="3_y7dg5"]
+[ext_resource type="Script" uid="uid://u5nc2ei1q3t" path="res://classes/location_data.gd" id="4_mcgm5"]
+
+[resource]
+script = ExtResource("4_mcgm5")
+location_id = 3
+location_name = "Станция Ретор"
+location_type = "water"
+enemies_at_location = Array[ExtResource("1_60acq")]([ExtResource("2_mcgm5")])
+metadata/_custom_type_script = "uid://u5nc2ei1q3t"

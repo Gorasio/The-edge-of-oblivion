@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://d2lwgu58n3hbf"]
+
+[ext_resource type="Script" uid="uid://mnb2ktjtby1s" path="res://classes/enemy_data.gd" id="1_itvn1"]
+[ext_resource type="Texture2D" uid="uid://bwfwlad6a7wmi" path="res://assets/icons/enemies/bandit.png" id="1_nml5l"]
+
+[resource]
+script = ExtResource("1_itvn1")
+enemy_id = 3
+name = "Бандит"
+icon = ExtResource("1_nml5l")
+metadata/_custom_type_script = "uid://mnb2ktjtby1s"

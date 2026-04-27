@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="LocationQuestData" load_steps=2 format=3 uid="uid://v8ohbahnef6k"]
+
+[ext_resource type="Script" uid="uid://olyhhd3g2mj" path="res://classes/quest_location_data.gd" id="1_74jme"]
+
+[resource]
+script = ExtResource("1_74jme")
+metadata/_custom_type_script = "uid://olyhhd3g2mj"
