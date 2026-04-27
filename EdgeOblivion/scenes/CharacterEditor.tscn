@@ -1,0 +1,167 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckmptd1hmgcql"]
+
+[ext_resource type="Script" uid="uid://d2hw42jjvdlna" path="res://scenes/character_editor.gd" id="1_hqiuk"]
+
+[node name="CharacterEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hqiuk")
+
+[node name="BackgroundPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 24.0
+offset_right = 443.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 32
+text = "СОЗДАНИЕ ПЕРСОНАЖА"
+horizontal_alignment = 1
+
+[node name="PortraitPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 96.0
+offset_right = 264.0
+offset_bottom = 296.0
+
+[node name="Portrait" type="TextureRect" parent="PortraitPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 180.0
+offset_bottom = 180.0
+expand_mode = 1
+stretch_mode = 1
+
+[node name="PortraitLabel" type="Label" parent="PortraitPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 210.0
+offset_right = 180.0
+offset_bottom = 235.0
+text = "Портрет"
+horizontal_alignment = 1
+
+[node name="PortraitButton" type="Button" parent="PortraitPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 240.0
+offset_right = 180.0
+offset_bottom = 280.0
+text = "Сменить портрет"
+
+[node name="NamePanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 96.0
+offset_right = 1088.0
+offset_bottom = 296.0
+
+[node name="NameLabel" type="Label" parent="NamePanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 200.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 16
+text = "Имя персонажа:"
+
+[node name="NameInput" type="LineEdit" parent="NamePanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 70.0
+offset_right = 752.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 18
+placeholder_text = "Введите имя"
+
+[node name="SpecializationPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 312.0
+offset_right = 1088.0
+offset_bottom = 492.0
+
+[node name="SpecializationTitle" type="Label" parent="SpecializationPanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 250.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "Выберите специализацию:"
+
+[node name="SpecializationGrid" type="GridContainer" parent="SpecializationPanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 60.0
+offset_right = 720.0
+offset_bottom = 180.0
+columns = 3
+
+[node name="ScoutButton" type="Button" parent="SpecializationPanel/SpecializationGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "🔍 Разведчик
++20% к добыче"
+
+[node name="GathererButton" type="Button" parent="SpecializationPanel/SpecializationGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "🫙 Собиратель
++50% к сбору ресурсов"
+
+[node name="ObserverButton" type="Button" parent="SpecializationPanel/SpecializationGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "👁️ Наблюдатель
++50% к охране"
+
+[node name="MedicButton" type="Button" parent="SpecializationPanel/SpecializationGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "💊 Медик
++20% к лечению"
+
+[node name="CommanderButton" type="Button" parent="SpecializationPanel/SpecializationGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "⭐ Командир
++50% к силе отряда"
+
+[node name="WarriorButton" type="Button" parent="SpecializationPanel/SpecializationGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "⚔️ Воин
++30% к атаке"
+
+[node name="CreateButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 552.0
+offset_right = 478.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 20
+text = "НАЧАТЬ ИГРУ"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 552.0
+offset_right = 704.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 22
+text = "↩️ Назад"
+
+[connection signal="pressed" from="PortraitPanel/PortraitButton" to="." method="_on_portrait_button_pressed"]
+[connection signal="pressed" from="CreateButton" to="." method="_on_create_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

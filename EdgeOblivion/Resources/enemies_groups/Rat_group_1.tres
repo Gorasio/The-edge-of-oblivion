@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="EnemyGroupData" load_steps=3 format=3 uid="uid://6djjvdddnma5"]
+
+[ext_resource type="Script" uid="uid://cedgdy4a4i84o" path="res://classes/EnemyGroupData.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cf2uhgjt1iu5y" path="res://assets/portraits/generals/rat_king.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+group_id = 1
+group_name = "🐀 Стая крыс"
+group_icon_text = "🐀"
+group_description = "Опасная стая грызунов под предводительством Короля крыс"
+total_reward_materials = 50
+total_reward_food = 25
+total_reward_water = 15
+danger_level = 3
+general_name = "👑 Король крыс"
+general_portrait = ExtResource("2")
+general_health = 120
+general_power = 30
+general_damage = 18
+general_armor = 5
+general_attack_speed = 1.3
+general_description = "Могучий предводитель крысиной стаи"
+enemy_type_1 = "Крыса"
+number_enemy_type_1 = 5
+enemy_type_2 = "Крыса"
+number_enemy_type_2 = 3

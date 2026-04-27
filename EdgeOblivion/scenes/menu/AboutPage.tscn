@@ -1,0 +1,228 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcowew8lxyy5b"]
+
+[ext_resource type="Script" uid="uid://15pxcj13l4px" path="res://scenes/menu/about_page.gd" id="1"]
+
+[node name="AboutPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="BackgroundPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 650.0
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 30.0
+offset_right = 750.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 28
+text = "О ПРОЕКТЕ"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 120.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 16
+text = "↩️ Назад"
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 1050.0
+offset_bottom = 600.0
+tab_alignment = 1
+current_tab = 0
+
+[node name="Authors" type="VBoxContainer" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="AuthorsScroll" type="ScrollContainer" parent="TabContainer/Authors"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AuthorsContent" type="Panel" parent="TabContainer/Authors/AuthorsScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TitleAuthors" type="Label" parent="TabContainer/Authors/AuthorsScroll/AuthorsContent"]
+layout_mode = 0
+offset_right = 950.0
+offset_bottom = 34.0
+theme_override_font_sizes/font_size = 24
+text = "РАЗРАБОТЧИКИ"
+horizontal_alignment = 1
+
+[node name="Separator1" type="HSeparator" parent="TabContainer/Authors/AuthorsScroll/AuthorsContent"]
+layout_mode = 0
+offset_top = 38.0
+offset_right = 950.0
+offset_bottom = 42.0
+
+[node name="Author1" type="VBoxContainer" parent="TabContainer/Authors/AuthorsScroll/AuthorsContent"]
+clip_contents = true
+layout_mode = 0
+offset_left = 28.0
+offset_top = 46.0
+offset_right = 924.0
+offset_bottom = 120.0
+
+[node name="Author1Name" type="Label" parent="TabContainer/Authors/AuthorsScroll/AuthorsContent/Author1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 18
+text = "Автор:"
+
+[node name="Author1Desc" type="Label" parent="TabContainer/Authors/AuthorsScroll/AuthorsContent/Author1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "Вад Бари "
+
+[node name="Author1Desc2" type="Label" parent="TabContainer/Authors/AuthorsScroll/AuthorsContent/Author1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "Аня Тян"
+
+[node name="Kontent_Log" type="VBoxContainer" parent="TabContainer/Authors/AuthorsScroll/AuthorsContent"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 124.0
+offset_right = 924.0
+offset_bottom = 243.0
+
+[node name="Author2Name" type="Label" parent="TabContainer/Authors/AuthorsScroll/AuthorsContent/Kontent_Log"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 18
+text = "Источники контента:"
+
+[node name="Author2Desc" type="Label" parent="TabContainer/Authors/AuthorsScroll/AuthorsContent/Kontent_Log"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "Шедеврум(Нейросеть)
+Qwen(Нейросеть)
+NanoBanana(Нейросеть)
+Lornn (itch.io›profile/lornn) - фоны"
+
+[node name="Changelog" type="VBoxContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ChangelogScroll" type="ScrollContainer" parent="TabContainer/Changelog"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChangelogContent" type="VBoxContainer" parent="TabContainer/Changelog/ChangelogScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TitleChangelog" type="Label" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "ИСТОРИЯ ОБНОВЛЕНИЙ"
+horizontal_alignment = 1
+
+[node name="Separator2" type="HSeparator" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent"]
+layout_mode = 2
+
+[node name="Version1" type="VBoxContainer" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent"]
+layout_mode = 2
+
+[node name="Version1Title" type="Label" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent/Version1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.8, 0.3, 1)
+theme_override_font_sizes/font_size = 18
+text = "Версия 0.1.0 alpha"
+
+[node name="Version1Desc" type="Label" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent/Version1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "- Базовая механика выживания
+- Система ресурсов
+- Магазин улучшений"
+
+[node name="Version2" type="VBoxContainer" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent"]
+layout_mode = 2
+
+[node name="Version2Title" type="Label" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent/Version2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.8, 0.3, 1)
+theme_override_font_sizes/font_size = 18
+text = "Версия 0.1.0 "
+
+[node name="Version2Desc" type="Label" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent/Version2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "- Добавлены выжившие
+- Система работ"
+
+[node name="Version3" type="VBoxContainer" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent"]
+layout_mode = 2
+
+[node name="Version3Title" type="Label" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent/Version3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.8, 0.3, 1)
+theme_override_font_sizes/font_size = 18
+text = "Версия 0.2.0 "
+
+[node name="Version3Desc" type="Label" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent/Version3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "- Добавлены локации
+- Система противников
+- Улучшена графика
+- Панель чит-кодов"
+
+[node name="Version4" type="VBoxContainer" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent"]
+layout_mode = 2
+
+[node name="Version4Title" type="Label" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent/Version4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.8, 0.3, 1)
+theme_override_font_sizes/font_size = 18
+text = "Версия 0.3.0 "
+
+[node name="Version4Desc" type="Label" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent/Version4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "- Добавлена система отрядов
+- Режим Бога
+- Улучшен интерфейс
+- Боевая система"
+
+[node name="Planned" type="VBoxContainer" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent"]
+layout_mode = 2
+
+[node name="PlannedTitle" type="Label" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent/Planned"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 18
+text = "ПЛАНИРУЕТСЯ"
+
+[node name="PlannedDesc" type="Label" parent="TabContainer/Changelog/ChangelogScroll/ChangelogContent/Planned"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "- Сетевая игра
+- Новые локации
+- Уникальные события
+- Система достижений"

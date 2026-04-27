@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" load_steps=2 format=3 uid="uid://hmcc0uhx0v32"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_4w6rm"]
+
+[resource]
+script = ExtResource("1_4w6rm")
+graph_data = {
+"FIRST": {
+"dialogue_node_1": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(380, 140),
+"portrait": "",
+"size": Vector2(250.00005, 382.00018),
+"to_node": ["END"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(140, 220),
+"size": Vector2(180, 97),
+"start_id": "FIRST",
+"to_node": ["dialogue_node_1"]
+}
+},
+"FIRST_2": {
+"dialogue_node_2": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_2_DIALOG_2",
+"node_index": 2,
+"node_type": "dialogue_node",
+"offset": Vector2(400, 540),
+"portrait": "",
+"size": Vector2(250.00002, 382),
+"to_node": ["END"]
+},
+"start_node_2": {
+"node_index": 2,
+"node_type": "start_node",
+"offset": Vector2(140, 620),
+"size": Vector2(180, 97),
+"start_id": "FIRST_2",
+"to_node": ["dialogue_node_2"]
+}
+}
+}
+dialogs = {
+"FIRST_2_DIALOG_2": {
+"default": "Теперь в отряде больше людей.",
+"en": ""
+},
+"FIRST_DIALOG_1": {
+"default": "К вам присоединился новый выживший!",
+"en": ""
+}
+}
+characters = {
+"FIRST": {},
+"FIRST_2": {}
+}

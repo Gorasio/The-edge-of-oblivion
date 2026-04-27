@@ -1,0 +1,170 @@
+[gd_scene load_steps=2 format=3 uid="uid://c73ncri881th3"]
+
+[ext_resource type="Script" uid="uid://7f3hxifckfun" path="res://scenes/survivor_management.gd" id="1_naq03"]
+
+[node name="SurvivorManagement" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_naq03")
+
+[node name="BackgroundPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 650.0
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 20.0
+offset_right = 750.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 28
+text = "👥 ОТРЯД ВЫЖИВШИХ"
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1050.0
+offset_top = 20.0
+offset_right = 1120.0
+offset_bottom = 70.0
+text = "✖️"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 120.0
+offset_bottom = 70.0
+text = "↩️ Назад"
+
+[node name="GeneralPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 90.0
+offset_right = 400.0
+offset_bottom = 280.0
+
+[node name="GeneralPortrait" type="TextureRect" parent="GeneralPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 100.0
+offset_bottom = 100.0
+expand_mode = 1
+
+[node name="GeneralName" type="Label" parent="GeneralPanel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 30.0
+offset_right = 360.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 20
+text = "Командир"
+
+[node name="GeneralSpecialization" type="Label" parent="GeneralPanel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 65.0
+offset_right = 360.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 12
+text = "Лидер отряда"
+
+[node name="GeneralHealth" type="Label" parent="GeneralPanel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 95.0
+offset_right = 360.0
+offset_bottom = 120.0
+text = "❤️ Здоровье: 150/150"
+
+[node name="GeneralPower" type="Label" parent="GeneralPanel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 125.0
+offset_right = 360.0
+offset_bottom = 150.0
+text = "⚔️ Сила: 50  🛡️ Броня: 10"
+
+[node name="GeneralBonus" type="Label" parent="GeneralPanel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 155.0
+offset_right = 360.0
+offset_bottom = 180.0
+text = "✨ Бонус: +50% к охране"
+
+[node name="StatsPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 288.0
+offset_right = 400.0
+offset_bottom = 630.0
+
+[node name="StatsTitle" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 360.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 18
+text = "📊 СТАТИСТИКА"
+
+[node name="TotalPower" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 50.0
+offset_right = 360.0
+offset_bottom = 80.0
+text = "⚔️ Общая сила: 0"
+
+[node name="FoodGatherers" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 90.0
+offset_right = 360.0
+offset_bottom = 120.0
+text = "🍖 Добытчики еды: 0"
+
+[node name="WaterGatherers" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 130.0
+offset_right = 360.0
+offset_bottom = 160.0
+text = "💧 Добытчики воды: 0"
+
+[node name="Guards" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 170.0
+offset_right = 360.0
+offset_bottom = 200.0
+text = "🛡️ Охранники: 0"
+
+[node name="Idle" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 210.0
+offset_right = 360.0
+offset_bottom = 240.0
+text = "😴 Отдыхающие: 0"
+
+[node name="SurvivorsScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 90.0
+offset_right = 1130.0
+offset_bottom = 630.0
+
+[node name="SurvivorsGrid" type="GridContainer" parent="SurvivorsScrollContainer"]
+layout_mode = 2
+columns = 2
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LocationData" load_steps=6 format=3 uid="uid://c1v58sqnpauww"]
+
+[ext_resource type="Script" uid="uid://csqbp6bmlb12q" path="res://classes/enemy_location_data.gd" id="1_r4gad"]
+[ext_resource type="Script" uid="uid://dqk6cc1doua4j" path="res://classes/npc_data.gd.gd" id="2_pywbu"]
+[ext_resource type="Resource" uid="uid://bmlvaain32731" path="res://Resources/enemies_locations/Rat.tres" id="2_s162b"]
+[ext_resource type="Script" uid="uid://olyhhd3g2mj" path="res://classes/quest_location_data.gd" id="3_kvhup"]
+[ext_resource type="Script" uid="uid://u5nc2ei1q3t" path="res://classes/location_data.gd" id="4_s162b"]
+
+[resource]
+script = ExtResource("4_s162b")
+location_id = 1
+location_name = "Пост Томилов"
+location_type = "water"
+enemies_at_location = Array[ExtResource("1_r4gad")]([ExtResource("2_s162b")])
+metadata/_custom_type_script = "uid://u5nc2ei1q3t"

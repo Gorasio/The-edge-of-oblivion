@@ -1,0 +1,217 @@
+[gd_scene load_steps=4 format=3 uid="uid://cemtywphnfjdu"]
+
+[ext_resource type="Script" uid="uid://b6ouikheflmkj" path="res://scenes/battle_scene.gd" id="1_ltshs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ltshs"]
+bg_color = Color(1.0829419e-07, 0.07053199, 0.10663723, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gkmpl"]
+bg_color = Color(0, 0.13900849, 0.23230404, 1)
+
+[node name="BattleScene" type="Node2D"]
+script = ExtResource("1_ltshs")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ltshs")
+
+[node name="TopPanel" type="Panel" parent="UI"]
+offset_right = 1153.0
+offset_bottom = 72.0
+
+[node name="TimerLabel" type="Label" parent="UI/TopPanel"]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 15.0
+offset_right = 650.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 20
+text = "00:00"
+horizontal_alignment = 1
+
+[node name="SpeedControl" type="Panel" parent="UI/TopPanel"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 8.0
+offset_right = 512.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gkmpl")
+
+[node name="SpeedLabel" type="Label" parent="UI/TopPanel/SpeedControl"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 32.0
+offset_right = 198.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 14
+text = "Скорость:"
+
+[node name="SpeedSlider" type="HSlider" parent="UI/TopPanel/SpeedControl"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 368.0
+offset_bottom = 24.0
+min_value = 0.25
+max_value = 3.0
+step = 0.25
+value = 1.0
+
+[node name="SpeedValue" type="Label" parent="UI/TopPanel/SpeedControl"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 32.0
+offset_right = 228.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 14
+text = "1.0x"
+
+[node name="PauseButton" type="Button" parent="UI/TopPanel"]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 10.0
+offset_right = 1100.0
+offset_bottom = 50.0
+text = "⏸️ Пауза"
+
+[node name="BackButton" type="Button" parent="UI/TopPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 120.0
+offset_bottom = 50.0
+text = "↩️ Назад"
+
+[node name="LeftPanel" type="Panel" parent="UI"]
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 560.0
+offset_bottom = 512.0
+
+[node name="GeneralPanel" type="Panel" parent="UI/LeftPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 530.0
+offset_bottom = 120.0
+
+[node name="GeneralPortrait" type="TextureRect" parent="UI/LeftPanel/GeneralPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 90.0
+offset_bottom = 90.0
+expand_mode = 1
+
+[node name="GeneralName" type="Label" parent="UI/LeftPanel/GeneralPanel"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 20.0
+offset_right = 520.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "Командир"
+
+[node name="GeneralHealth" type="Label" parent="UI/LeftPanel/GeneralPanel"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 46.0
+offset_right = 518.0
+offset_bottom = 71.0
+text = "❤️ Здоровье: 150/150"
+
+[node name="GeneralPower" type="Label" parent="UI/LeftPanel/GeneralPanel"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 70.0
+offset_right = 518.0
+offset_bottom = 95.0
+text = "⚔️ Сила: 50"
+
+[node name="SurvivorsScroll" type="ScrollContainer" parent="UI/LeftPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 130.0
+offset_right = 530.0
+offset_bottom = 432.0
+
+[node name="SurvivorsGrid" type="GridContainer" parent="UI/LeftPanel/SurvivorsScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="RightPanel" type="Panel" parent="UI"]
+offset_left = 580.0
+offset_top = 80.0
+offset_right = 1120.0
+offset_bottom = 512.0
+
+[node name="EnemyPanel" type="Panel" parent="UI/RightPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 530.0
+offset_bottom = 120.0
+
+[node name="EnemyPortrait" type="TextureRect" parent="UI/RightPanel/EnemyPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 90.0
+offset_bottom = 90.0
+expand_mode = 1
+
+[node name="EnemyName" type="Label" parent="UI/RightPanel/EnemyPanel"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 20.0
+offset_right = 520.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "Противник"
+
+[node name="EnemyHealth" type="Label" parent="UI/RightPanel/EnemyPanel"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 46.0
+offset_right = 518.0
+offset_bottom = 71.0
+text = "❤️ Здоровье: ?"
+
+[node name="EnemyPower" type="Label" parent="UI/RightPanel/EnemyPanel"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 70.0
+offset_right = 518.0
+offset_bottom = 95.0
+text = "⚔️ Сила: ?"
+
+[node name="EnemiesScroll" type="ScrollContainer" parent="UI/RightPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 130.0
+offset_right = 530.0
+offset_bottom = 432.0
+
+[node name="EnemiesGrid" type="GridContainer" parent="UI/RightPanel/EnemiesScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="BattleLog" type="Panel" parent="UI"]
+offset_left = 24.0
+offset_top = 520.0
+offset_right = 1124.0
+offset_bottom = 570.0
+
+[node name="BattleLogLabel" type="Label" parent="UI/BattleLog"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 1092.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 12
+text = "Боевой лог:"

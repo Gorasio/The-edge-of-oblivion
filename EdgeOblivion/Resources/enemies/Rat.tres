@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://dgucocybiajb8"]
+
+[ext_resource type="Texture2D" uid="uid://coqjlfmq8r8hp" path="res://assets/icons/enemies/rat.png" id="1_6rebo"]
+[ext_resource type="Script" uid="uid://mnb2ktjtby1s" path="res://classes/enemy_data.gd" id="1_x2cdd"]
+
+[resource]
+script = ExtResource("1_x2cdd")
+enemy_id = 1
+name = "Крыса"
+icon = ExtResource("1_6rebo")
+metadata/_custom_type_script = "uid://mnb2ktjtby1s"

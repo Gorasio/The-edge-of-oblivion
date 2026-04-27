@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" load_steps=2 format=3 uid="uid://b4gb5kr7pgy2d"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_qimca"]
+
+[resource]
+script = ExtResource("1_qimca")
+graph_data = {
+"FIRST": {
+"dialogue_node_1": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(360, 20),
+"portrait": "",
+"size": Vector2(250, 382),
+"to_node": ["END"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(120, 100),
+"size": Vector2(180.00003, 97),
+"start_id": "FIRST",
+"to_node": ["dialogue_node_1"]
+}
+},
+"FIRST_2": {
+"dialogue_node_2": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_2_DIALOG_2",
+"node_index": 2,
+"node_type": "dialogue_node",
+"offset": Vector2(360, 440),
+"portrait": "",
+"size": Vector2(250, 382),
+"to_node": ["END"]
+},
+"start_node_2": {
+"node_index": 2,
+"node_type": "start_node",
+"offset": Vector2(120, 520),
+"size": Vector2(180.00003, 96.99988),
+"start_id": "FIRST_2",
+"to_node": ["dialogue_node_2"]
+}
+}
+}
+dialogs = {
+"FIRST_2_DIALOG_2": {
+"default": "Вы получили ценные ресурсы.",
+"en": ""
+},
+"FIRST_DIALOG_1": {
+"default": "Победа! Противник повержен.",
+"en": ""
+}
+}
+characters = {
+"FIRST": {},
+"FIRST_2": {}
+}

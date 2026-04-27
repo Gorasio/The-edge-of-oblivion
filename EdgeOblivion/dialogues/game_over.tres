@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" load_steps=2 format=3 uid="uid://dgecaepa4xgcg"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_rbjse"]
+
+[resource]
+script = ExtResource("1_rbjse")
+graph_data = {
+"FIRST": {
+"dialogue_node_1": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(280, -140),
+"portrait": "",
+"size": Vector2(250.00002, 382.00006),
+"to_node": ["END"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(40, -60),
+"size": Vector2(180.00003, 96.99992),
+"start_id": "FIRST",
+"to_node": ["dialogue_node_1"]
+}
+},
+"FIRST_2": {
+"dialogue_node_2": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_2_DIALOG_2",
+"node_index": 2,
+"node_type": "dialogue_node",
+"offset": Vector2(280, 360),
+"portrait": "",
+"size": Vector2(250.00002, 382.00003),
+"to_node": ["END"]
+},
+"start_node_2": {
+"node_index": 2,
+"node_type": "start_node",
+"offset": Vector2(40, 440),
+"size": Vector2(180.00003, 97.00018),
+"start_id": "FIRST_2",
+"to_node": ["dialogue_node_2"]
+}
+}
+}
+dialogs = {
+"FIRST_2_DIALOG_2": {
+"default": "Ты не смог выжить в этом жестоком мире.",
+"en": ""
+},
+"FIRST_DIALOG_1": {
+"default": "Игра окончена...",
+"en": ""
+}
+}
+characters = {
+"FIRST": {},
+"FIRST_2": {}
+}

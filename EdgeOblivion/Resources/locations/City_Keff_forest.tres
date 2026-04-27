@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="LocationData" load_steps=8 format=3 uid="uid://c7yh6y5ia12gg"]
+
+[ext_resource type="Script" uid="uid://csqbp6bmlb12q" path="res://classes/enemy_location_data.gd" id="1_7gi1o"]
+[ext_resource type="Script" uid="uid://u5nc2ei1q3t" path="res://classes/location_data.gd" id="1_o8syq"]
+[ext_resource type="Resource" uid="uid://bmlvaain32731" path="res://Resources/enemies_locations/Rat.tres" id="2_8xep2"]
+[ext_resource type="Script" uid="uid://dqk6cc1doua4j" path="res://classes/npc_data.gd.gd" id="2_is364"]
+[ext_resource type="Script" uid="uid://olyhhd3g2mj" path="res://classes/quest_location_data.gd" id="3_a4t7y"]
+[ext_resource type="Resource" uid="uid://gnkujjgj2cs0" path="res://Resources/npcs/Tyna.tres" id="3_is364"]
+[ext_resource type="Resource" uid="uid://b5ym8fw44wqk0" path="res://Resources/quests/StartCapital.tres" id="6_eglbu"]
+
+[resource]
+script = ExtResource("1_o8syq")
+location_id = 1
+location_name = "Город Кефф"
+quests_at_location = Array[ExtResource("3_a4t7y")]([ExtResource("6_eglbu")])
+enemies_at_location = Array[ExtResource("1_7gi1o")]([ExtResource("2_8xep2")])
+npc_at_location = Array[ExtResource("2_is364")]([ExtResource("3_is364")])
+metadata/_custom_type_script = "uid://u5nc2ei1q3t"

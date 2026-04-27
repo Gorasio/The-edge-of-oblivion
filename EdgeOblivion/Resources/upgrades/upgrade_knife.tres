@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UpgradeResource" load_steps=2 format=3 uid="uid://m7eloyfqg4ge"]
+
+[ext_resource type="Script" uid="uid://c35dd6f0xck5h" path="res://resources_classes/upgrade_resource.gd" id="1_4sq6n"]
+
+[resource]
+script = ExtResource("1_4sq6n")
+title = "Острые ножи"
+description = "Позволяют эффективнее собирать еду"
+icon_text_left = "🔪"
+icon_text_right = "⭐"
+metadata/_custom_type_script = "uid://c35dd6f0xck5h"
